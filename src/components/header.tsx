@@ -44,7 +44,7 @@ export function Header() {
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="Marvel Movies">
+                <ListItem href="/avengers" title="Marvel Movies">
                   Avengers Movies, Iron Man, Thor, Captain America...etc
                 </ListItem>
               </ul>
