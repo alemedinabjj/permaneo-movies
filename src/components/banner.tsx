@@ -7,10 +7,10 @@ export const Banner = async () => {
 
   return (
     <div className="h-96 bg-gray-900 mb-6 p-5">
-      <Carousel className="container w-full mx-auto">
-        <CarouselContent >
+      <Carousel className="md:container max-w-[200px] w-full mx-auto">
+        <CarouselContent>
           {movies.Search.map(movie => (
-            <CarouselItem key={movie.imdbID} className="basis-1/6">
+            <CarouselItem key={movie.imdbID} className="md:basis-1/6">
               <Image
                 src={movie.Poster}
                 alt={movie.Title}

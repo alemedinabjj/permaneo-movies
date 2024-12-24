@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="p-4 bg-secondary border-b shadow-sm">
-      <div className="container mx-auto flex items-center">
+      <div className="container mx-auto flex items-center flex-col md:flex-row">
       <Link href="/">Permaneo <span className="text-primary font-bold">Video</span></Link>
         <NavigationMenu className="mx-auto gap-2">
         <NavigationMenuList>
