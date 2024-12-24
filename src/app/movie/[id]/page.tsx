@@ -3,8 +3,16 @@ import { movieService } from "@/services/movies-services";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function MoviePage({ params }: { params: { id: string } }) {
-  const movie = await movieService.getMovieById({ i: params.id });
+
+type tParams = Promise<{ id: string }>;
+
+
+export default async function MoviePage(props: { params: tParams }) {
+  const { id } = await props.params;
+
+  const movie = await movieService.getMovieById({ i: id });
+
+  
   return (
     <main className="container mx-auto space-y-6">
 

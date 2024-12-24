@@ -1,12 +1,15 @@
 import { CardMovies } from "@/components/card-movies"
 import { movieService } from "@/services/movies-services"
 
+type tParams = Promise<{ q: string }>
 
 export default async function SearchPage({
-  searchParams: { q },
+  searchParams,
 }: {
-  searchParams: { q: string }
+  searchParams: tParams
 }) {
+  const { q } = await searchParams
+
   const movies = await movieService.searchMovies({ s: q, page: 1 })
 
   if (movies.Response === 'False') {
